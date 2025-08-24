@@ -1,0 +1,40 @@
+services:
+  db:
+    image: mariadb:10.6
+    restart: unless-stopped
+    environment:
+      - MARIADB_ROOT_PASSWORD=secretroot
+      - MARIADB_DATABASE=moodle
+      - MARIADB_USER=moodle
+      - MARIADB_PASSWORD=secretpass
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - dbdata:/var/lib/mysql
+
+  moodle:
+    image: bitnami/moodle:4.3.5   # versión estable
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    environment:
+      - BITNAMI_DEBUG=true
+      - MOODLE_DATABASE_TYPE=mariadb
+      - MOODLE_DATABASE_HOST=db
+      - MOODLE_DATABASE_PORT_NUMBER=3306
+      - MOODLE_DATABASE_NAME=moodle
+      - MOODLE_DATABASE_USER=moodle
+      - MOODLE_DATABASE_PASSWORD=secretpass
+      - MOODLE_USERNAME=admin
+      - MOODLE_PASSWORD=Admin!123
+      - MOODLE_SITE_NAME=Moodle Demo
+    volumes:
+      - moodle_app:/bitnami/moodle
+      - moodle_data:/bitnami/moodledata
+    depends_on:
+      - db
+
+volumes:
+  dbdata:
+  moodle_app:
+  moodle_data:

@@ -1,0 +1,6 @@
+username,firstname,lastname,email,auth,cohort1,lang,country,suspended
+doc001,DocenteNombre1,DocenteApellido1,doc001@colegio-demo.edu.co,oauth2,Profesores-2025A,es,CO,0
+doc002,DocenteNombre2,DocenteApellido2,doc002@colegio-demo.edu.co,oauth2,Profesores-2025A,es,CO,0
+doc003,DocenteNombre3,DocenteApellido3,doc003@colegio-demo.edu.co,oauth2,Profesores-2025A,es,CO,0
+doc004,DocenteNombre4,DocenteApellido4,doc004@colegio-demo.edu.co,oauth2,Profesores-2025A,es,CO,0
+doc005,DocenteNombre5,DocenteApellido5,doc005@colegio-demo.edu.co,oauth2,Profesores-2025A,es,CO,0
