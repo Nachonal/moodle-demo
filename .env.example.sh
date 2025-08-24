@@ -1,0 +1,14 @@
+# Base de datos
+MARIADB_ROOT_PASSWORD=changeme_root
+MARIADB_DATABASE=moodle
+MARIADB_USER=moodle
+MARIADB_PASSWORD=changeme_db
+
+# Admin Moodle
+MOODLE_USERNAME=admin
+MOODLE_PASSWORD=Admin!123
+MOODLE_SITE_NAME=Moodle Demo
+
+# Puertos
+HTTP_PORT=8080
+HTTPS_PORT=8443
