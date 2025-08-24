@@ -1,0 +1,15 @@
+# Docker/containers
+*.log
+*.pid
+*.pid.lock
+
+# No subir secretos ni datos
+.env
+moodledata/
+moodleapp/
+backups/
+
+# SO/IDE
+.DS_Store
+Thumbs.db
+.vscode/
